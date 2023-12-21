@@ -5,38 +5,38 @@ def calculate(operation):
         num1 = float(entry1.get())
         num2 = float(entry2.get())
 
-        if operation == "Toplama":
+        if operation == "Addition":
             result = num1 + num2
-        elif operation == "Çıkarma":
+        elif operation == "Subtraction":
             result = num1 - num2
-        elif operation == "Çarpma":
+        elif operation == "Multiplication":
             result = num1 * num2
-        elif operation == "Bölme":
+        elif operation == "Division":
             if num2 != 0:
                 result = num1 / num2
             else:
-                result = "Bölme hatası"
+                result = "Division error"
         else:
-            result = "Geçersiz işlem"
+            result = "Invalid operation"
 
-        result_label.config(text=f"Sonuç: {result}")
+        result_label.config(text=f"Result: {result}")
     except ValueError:
-        result_label.config(text="Geçersiz giriş")
+        result_label.config(text="Invalid input")
 
 window = tk.Tk()
-window.title("Hesap Makinesi")
+window.title("Calculator")
 
 entry1 = tk.Entry(window, width=10)
 entry2 = tk.Entry(window, width=10)
 
 label1 = tk.Label(window, text="First Number:")
 label2 = tk.Label(window, text="Second Number:")
-result_label = tk.Label(window, text="Sonuç:")
+result_label = tk.Label(window, text="Result:")
 
-add_button = tk.Button(window, text="Toplama", command=lambda: calculate("Toplama"))
-subtract_button = tk.Button(window, text="Çıkarma", command=lambda: calculate("Çıkarma"))
-multiply_button = tk.Button(window, text="Çarpma", command=lambda: calculate("Çarpma"))
-divide_button = tk.Button(window, text="Bölme", command=lambda: calculate("Bölme"))
+add_button = tk.Button(window, text="Addition", command=lambda: calculate("Addition"))
+subtract_button = tk.Button(window, text="Subtraction", command=lambda: calculate("Subtraction"))
+multiply_button = tk.Button(window, text="Multiplication", command=lambda: calculate("Multiplication"))
+divide_button = tk.Button(window, text="Division", command=lambda: calculate("Division"))
 
 label1.grid(row=0, column=0)
 entry1.grid(row=0, column=1)
