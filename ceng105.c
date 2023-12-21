@@ -51,4 +51,3 @@ divide_button.grid(row=3, column=1)
 result_label.grid(row=4, column=0, columnspan=2)
 
 window.mainloop()
-
