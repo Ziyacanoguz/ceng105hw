@@ -40,14 +40,14 @@ divide_button = tk.Button(window, text="Division", command=lambda: calculate("Di
 
 label1.grid(row=0, column=0)
 entry1.grid(row=0, column=1)
-label2.grid(row=1, column=0)
-entry2.grid(row=1, column=1)
+label2.grid(row=0, column=2)  # Changed row to 0
+entry2.grid(row=0, column=3)  # Changed row to 0
 
-add_button.grid(row=2, column=0)
-subtract_button.grid(row=2, column=1)
-multiply_button.grid(row=3, column=0)
-divide_button.grid(row=3, column=1)
+add_button.grid(row=1, column=0, columnspan=2)  # Combined into one row
+subtract_button.grid(row=1, column=2, columnspan=2)  # Combined into one row
+multiply_button.grid(row=2, column=0, columnspan=2)  # Combined into one row
+divide_button.grid(row=2, column=2, columnspan=2)  # Combined into one row
 
-result_label.grid(row=4, column=0, columnspan=2)
+result_label.grid(row=3, column=0, columnspan=4)  # Changed columnspan to 4
 
 window.mainloop()
